@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Alura Plus </title>
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f1a25, #1a2a3a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #0d1b2a;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    border: 2px solid #4facfe;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.formulario .titulo {
+    background: linear-gradient(45deg, #4facfe, #00bfff);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="date"],
+.formulario select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #4facfe;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.formulario input::placeholder {
+    color: #bbbbbb;
+}
+
+.formulario label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.senha-info {
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.regiao {
+    margin-bottom: 15px;
+}
+
+.regiao label {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.regiao select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1a2a3a;
+    color: white;
+    border: 1px solid #4facfe;
+}
+
+.metodo-pagamento {
+    margin-bottom: 15px;
+}
+
+.metodo-pagamento label {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.metodo-pagamento select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1a2a3a;
+    color: white;
+    border: 1px solid #4facfe;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #4facfe, #00bfff);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.termos {
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.termos a {
+    color: #4facfe;
+    text-decoration: none;
+}
+</style>
+
+<body>
+    <div class="container">
+        <form class="formulario">
+            <div class="titulo">Crie sua conta</div>
+
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="E-mail" required>
+            
+            <label>Senha</label>
+            <input type="password" placeholder="Crie uma senha" required>
+            <p class="senha-info">Use pelo menos 8 caracteres, incluindo letras e números</p>
+            
+            <input type="password" placeholder="Confirme sua senha">
+            
+            <label>Data de Nascimento</label>
+            <input type="date" required>
+            
+            <label>País ou Região</label>
+            <div class="regiao">
+            <select required>
+                <option value="" disabled selected>Selecione seu país</option>
+                <option value="br">Brasil</option>
+                <option value="us">Estados Unidos</option>
+                <option value="pt">Portugal</option>
+                <option value="es">Espanha</option>
+                <option value="fr">França</option>
+                <option value="de">Alemanha</option>
+            </select>
+            
+            <label>Método de Pagamento</label>
+            <div class="metodo-pagamento">
+                <select required>
+                    <option value="" disabled selected>Selecione o método</option>
+                    <option value="credit">Cartão de Crédito</option>
+                    <option value="debit">Cartão de Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="pix">PIX (Brasil)</option>
+                </select>
+            </div>
+
+            <button type="submit">Assinar Agora</button>
+            
+            <p class="termos">
+                Ao assinar, você concorda com os <a href="#">Termos de Uso</a> e 
+                <a href="#">Política de Privacidade</a> da Alura Plus.
+            </p>
+        </form>
+    </div>
+</body>
+</html>
